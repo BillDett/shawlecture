@@ -6,7 +6,7 @@ For more complex relationships, you need to be able to also model the 'has-a' re
 
 Let's say your friend wants to use your software to model his home theater. He wants to be able to have different components within the theater set up differently and he also buys lots of new equipment and needs to swap out new items at any time.
 
-We should use packages here to separate out Appliances by use case. Let's make a 'food' and 'entertainment' sub-package.
+We should use packages here to separate out Appliances by use case. Let's make a 'food' and 'entertainment' sub-package. We will keep Appliance and Registered at the top level package since they are common across all types of appliances.
 
 HomeTheater now 'has-a' Television and 'has-a' SoundBar. By connecting the SoundBar to the Television, we can make it so that the Television controls the SoundBar volume when it is asked to change its volume.
 

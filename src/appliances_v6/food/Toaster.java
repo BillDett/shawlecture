@@ -1,14 +1,19 @@
 package appliances_v6.food;
 
-public class Toaster extends TempController {
+public class Toaster extends TempController implements Registered {
 
     private int slices;
+    private String serial;
 
     public Toaster( String l, int s, int p ) {
         super(l, p);
         slices = s;
         temperature = 350;  // default for medium toast
     }
+
+
+    public String getSerialNo() { return serial.toUpperCase(); }
+    public void setSerialNo(String s) { serial = "toast-" + s; }
 
     // Overrides the base class setTemp() method
     public void setTemp(double t) {

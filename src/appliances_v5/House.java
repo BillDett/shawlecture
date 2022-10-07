@@ -7,28 +7,31 @@ public class House {
 
         CanOpener opener = new CanOpener("Kitchen");
         
-        TempControls[] tempAppliances = new TempControls[3];
+        Registered[] rAppliances = new Registered[2];
 
-        // This works because all of these sub-types implement TempControls interface
-        tempAppliances[0] = new Refrigerator("Kitchen", 3);
-        tempAppliances[1] = new Oven("Kitchen", 3);
-        tempAppliances[2] = new Toaster("Kitchen", 4, 3);
-
-        System.out.println(opener);
-
-        // Set all temperature controlled appliances to 350 degrees
-        for (TempControls a : tempAppliances) {
-            a.setTemp(350);
-            System.out.println(a);
-        }
-
-        // Just change the temperature on the toaster. To make this clearer, let's create a specific
-        // Toaster reference that is "cast" from the reference to a TempControls interface.
-        // Be careful with this though, "widening" a reference won't work unless the instance actually can be cast to the sub-type properly
-        Toaster toaster = (Toaster) tempAppliances[2];
+        // Create our appliances and keep track of Registered ones
+        Refrigerator fridge = new Refrigerator("Kitchen", 3);
+        fridge.setSerialNo("20302200293092");
+        rAppliances[0] = (Registered) fridge;
+        
+        Oven oven = new Oven("Kitchen", 3);
+        
+        Toaster toaster = new Toaster("Kitchen", 4, 3);
+        toaster.setSerialNo("555928392234");
         toaster.setTemp(450);
         toaster.pushDown();
+        rAppliances[1] = (Registered) toaster;
+
+        System.out.println(opener);
+        System.out.println(fridge);
+        System.out.println(oven);
         System.out.println(toaster);
+
+        // Print serial numbers for all Registered appliances
+        System.out.println("Serial numbers:");
+        for (Registered r : rAppliances) {
+            System.out.println("\t" + r.getSerialNo());
+        }
 
     }
 

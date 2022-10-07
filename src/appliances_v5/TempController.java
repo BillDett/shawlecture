@@ -1,6 +1,6 @@
 package appliances_v5;
 
-public class TempController extends Appliance implements TempControls {
+public class TempController extends Appliance {
 
     protected double temperature;
 

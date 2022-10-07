@@ -2,7 +2,7 @@ package appliances_v6.food;
 
 import appliances_v6.Appliance;
 
-public class TempController extends Appliance implements TempControls {
+public class TempController extends Appliance {
 
     protected double temperature;
 
