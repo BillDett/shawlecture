@@ -14,6 +14,10 @@ public class Toaster extends TempController implements Registered {
 
     public String getSerialNo() { return serial.toUpperCase(); }
     public void setSerialNo(String s) { serial = "toast-" + s; }
+    public int register(String url) {
+        // call a web service passing along the serial number
+        return 200;
+    }
 
     // Overrides the base class setTemp() method
     public void setTemp(double t) {

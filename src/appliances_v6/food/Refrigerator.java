@@ -1,5 +1,7 @@
 package appliances_v6.food;
 
+import appliances_v6.Registered;
+
 public class Refrigerator extends TempController implements Registered {
 
     private String serial;
@@ -11,6 +13,10 @@ public class Refrigerator extends TempController implements Registered {
 
     public String getSerialNo() { return serial; }
     public void setSerialNo(String s) { serial = s; }
+    public int register(String url) {
+        // call a web service passing along the serial number
+        return 200;
+    }
 
     public String toString() {
         return "Refrigerator - " + super.toString() +  " - temperature: " + temperature + " degrees Fahrenheit.";

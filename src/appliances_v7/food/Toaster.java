@@ -1,6 +1,6 @@
-package appliances_v6.food;
+package appliances_v7.food;
 
-import appliances_v6.Registered;
+import appliances_v7.Registered;
 
 public class Toaster extends TempController implements Registered {
 

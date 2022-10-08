@@ -13,7 +13,16 @@ public class HomeTheater extends Appliance {
         soundbar = new SoundBar(l);
         tv.attachSoundBar(soundbar);
     }
-
+    
+    public void turnOn() {
+        tv.turnOn();
+        soundbar.turnOn();
+    }
+    public void turnOff() {
+        tv.turnOff();
+        soundbar.turnOff();
+    }
+    
     public Television getTV() { return tv; }
 
     public String toString() {

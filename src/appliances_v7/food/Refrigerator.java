@@ -1,4 +1,6 @@
-package appliances_v5;
+package appliances_v7.food;
+
+import appliances_v7.Registered;
 
 public class Refrigerator extends TempController implements Registered {
 

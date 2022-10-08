@@ -1,4 +1,4 @@
-package appliances_v6;
+package appliances_v7;
 
 public interface Registered {
     public String getSerialNo() ;

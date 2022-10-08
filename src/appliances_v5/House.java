@@ -33,6 +33,8 @@ public class House {
             System.out.println("\t" + r.getSerialNo());
         }
 
+        System.out.println("Registered refrigerator, got back status " + fridge.register("https://foo.bar"));
+
     }
 
 }
